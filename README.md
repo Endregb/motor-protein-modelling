@@ -1,8 +1,7 @@
 ## HTML Version
 You can view the HTML version of this notebook:
-- **Project Overview:** [index.html](docs/index.html) - Interactive landing page with project details
-- **Full Simulation:** [motorprotein_simulation.html](docs/motorprotein_simulation.html) - Complete notebook with all code and results
-- **GitHub Pages:** [https://endregb.github.io/motor-protein-modelling/](https://endregb.github.io/motor-protein-modelling/)
+- **Project Overview:** [index.html](https://endregb.github.io/motor-protein-modelling/) - Interactive landing page with project details
+- **Full Simulation:** [motorprotein_simulation.html](https://endregb.github.io/motor-protein-modelling/motorprotein_simulation.html) - Complete notebook with all code and results
 
 # Motor Protein Transport Simulation
 
