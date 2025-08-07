@@ -3,133 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motor Protein Transport Simulation - Documentation</title>
+    <title>Motor Protein Transport Simulation</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #eee;
+            color: white;
+            padding: 60px 0 40px 0;
         }
+        
         .header h1 {
-            color: #2c3e50;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
             margin-bottom: 10px;
         }
-        .header p {
-            color: #7f8c8d;
-            font-size: 1.1em;
+        
+        .header .course-info {
+            font-size: 1rem;
+            opacity: 0.8;
         }
-        .content {
+        
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 40px;
+            margin: 20px 0;
+        }
+        
+        .description {
             margin-bottom: 40px;
         }
-        .notebook-link {
+        
+        .description h2 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .description p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .feature ul {
+            color: #666;
+            padding-left: 20px;
+        }
+        
+        .feature li {
+            margin-bottom: 8px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 50px 0 30px 0;
+        }
+        
+        .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 15px 30px;
+            padding: 18px 40px;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: transform 0.2s ease;
-            margin: 10px 0;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
-        .notebook-link:hover {
+        
+        .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
         }
-        .description {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #667eea;
-        }
-        .footer {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-        .feature-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+        
+        .physics-concept {
+            background: #e8f4fd;
+            border: 1px solid #b3d9f2;
+            border-radius: 10px;
+            padding: 25px;
             margin: 30px 0;
         }
-        .feature-item {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        
+        .physics-concept h3 {
+            color: #0066cc;
+            margin-bottom: 15px;
         }
-        .feature-item h3 {
-            color: #495057;
-            margin-top: 0;
+        
+        .physics-concept p {
+            color: #004499;
+            margin-bottom: 10px;
+        }
+        
+        .collaborators {
+            background: #f0f8ff;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .collaborators h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .collaborator-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .collaborator {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            color: #667eea;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .collaborator:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            padding: 40px 0 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .main-content {
+                padding: 25px;
+                margin: 10px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .collaborator-list {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Motor Protein Transport Simulation</h1>
-        <p>Stochastic modeling of motor proteins using biased random walks in periodic potential landscapes</p>
-    </div>
-
-    <div class="content">
-        <div class="description">
-            <p><strong>About this project:</strong> This simulation models the stochastic motion of motor proteins, such as myosin, as they move along intracellular structures. The project uses a biased random walk in a two-level periodic potential landscape to capture the essential features of directional movement, asymmetry, and stochasticity in biological systems.</p>
+    <div class="container">
+        <div class="header">
+            <h1>Motor Protein Transport Simulation</h1>
+            <div class="subtitle">Stochastic modeling using biased random walks in periodic potential landscapes</div>
+            <div class="course-info">TMA4320 – Scientific Computing | NTNU Spring 2025</div>
         </div>
-
-        <div style="text-align: center; margin: 30px 0;">
-            <a href="motorprotein_simulation.html" class="notebook-link">
-                📊 View Complete Simulation Notebook
-            </a>
+        
+        <div class="main-content">
+            <div class="description">
+                <h2>Project Overview</h2>
+                <p>
+                    This simulation models the stochastic motion of <strong>motor proteins</strong>, such as myosin, 
+                    as they move along intracellular structures. The project uses a biased random walk in a 
+                    two-level periodic potential landscape to capture the essential features of directional 
+                    movement, asymmetry, and stochasticity in biological systems.
+                </p>
+                <p>
+                    We implement comprehensive <strong>diffusion equations and Boltzmann statistics</strong> 
+                    for protein transport, combining theoretical derivations with numerical simulations to 
+                    understand the fundamental mechanisms of cellular transport processes.
+                </p>
+            </div>
+            
+            <div class="physics-concept">
+                <h3>🔬 Key Biological Concepts</h3>
+                <p><strong>Motor Proteins:</strong> Molecular machines that convert chemical energy into mechanical work to transport cargo within cells.</p>
+                <p><strong>Biased Random Walk:</strong> A stochastic process where particles have a preferred direction of movement due to external forces.</p>
+                <p><strong>Ratchet Potentials:</strong> Asymmetric periodic potentials that create directional bias in particle transport.</p>
+                <p><strong>Boltzmann Statistics:</strong> Statistical mechanics principles governing the distribution of particles in energy landscapes.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>🔬 Scientific Modeling</h3>
+                    <ul>
+                        <li>Comprehensive implementation of diffusion equations</li>
+                        <li>Boltzmann statistics for protein transport</li>
+                        <li>Two-level periodic potential landscapes</li>
+                        <li>Asymmetric barriers creating directional bias</li>
+                    </ul>
+                </div>
+                
+                <div class="feature">
+                    <h3>� Numerical Analysis</h3>
+                    <ul>
+                        <li>Monte Carlo simulations with adaptive algorithms</li>
+                        <li>Analytical comparisons and validation</li>
+                        <li>Parameter sensitivity analysis</li>
+                        <li>Statistical error estimation and convergence studies</li>
+                    </ul>
+                </div>
+                
+                <div class="feature">
+                    <h3>📊 Data Visualization</h3>
+                    <ul>
+                        <li>Particle distribution plots over time</li>
+                        <li>Current flow and transport behavior analysis</li>
+                        <li>Ratchet potential energy landscapes</li>
+                        <li>Comparative analysis of different parameters</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="collaborators">
+                <h3>👥 Project Collaborators</h3>
+                <div class="collaborator-list">
+                    <a href="https://github.com/eirikrba" class="collaborator" target="_blank">eirikrba</a>
+                    <a href="https://github.com/adrianlund2003" class="collaborator" target="_blank">adrianlund2003</a>
+                    <a href="https://github.com/andrea14" class="collaborator" target="_blank">andrea14</a>
+                    <a href="https://github.com/Endregb" class="collaborator" target="_blank">Endregb</a>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <a href="motorprotein_simulation.html" class="cta-button">
+                    📊 View Complete Simulation Notebook
+                </a>
+            </div>
         </div>
-
-        <div class="feature-list">
-            <div class="feature-item">
-                <h3>🔬 Scientific Modeling</h3>
-                <p>Comprehensive implementation of diffusion equations and Boltzmann statistics for protein transport</p>
-            </div>
-            <div class="feature-item">
-                <h3>📈 Numerical Analysis</h3>
-                <p>Monte Carlo simulations with analytical comparisons and parameter sensitivity analysis</p>
-            </div>
-            <div class="feature-item">
-                <h3>🎯 Ratchet Potentials</h3>
-                <p>Two-level periodic potentials with asymmetric barriers that create directional bias</p>
-            </div>
-            <div class="feature-item">
-                <h3>📊 Data Visualization</h3>
-                <p>Comprehensive plots showing particle distributions, currents, and transport behavior</p>
-            </div>
+        
+        <div class="footer">
+            <p>© 2025 | TMA4320 Scientific Computing Project | Norwegian University of Science and Technology (NTNU)</p>
         </div>
-
-        <div class="description">
-            <h3>Academic Context</h3>
-            <p>This group project was completed as part of <strong>TMA4320 Introduksjon til vitenskapelige beregninger</strong> at NTNU (Spring 2025). The notebook contains detailed theoretical derivations, numerical implementations, and analysis of results, all documented in Norwegian.</p>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Generated from Jupyter Notebook | <a href="https://github.com/Endregb/motor-protein-modelling">View Source on GitHub</a></p>
-        <p><strong>Project Collaborators:</strong></p>
-        <p>
-            <a href="https://github.com/Endregb">Endregb</a> • 
-            <a href="https://github.com/eirikrba">eirikrba</a> • 
-            <a href="https://github.com/adrianlund2003">adrianlund2003</a> • 
-            <a href="https://github.com/andrea14">andrea14</a>
-        </p>
-        <p>TMA4320 Group Project | NTNU 2025</p>
     </div>
 </body>
 </html>
