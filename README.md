@@ -1,3 +1,6 @@
+## HTML Version
+You can view the HTML version of this notebook [here](https://endregb.github.io/motor-protein-modelling/).
+
 # Motor Protein Transport Simulation
 
 This project models the stochastic motion of motor proteins, such as myosin, as they move along structures in the cell, like myofilaments. These proteins convert chemical energy from ATP into mechanical work, allowing them to "walk" along intracellular tracks and transport cellular cargo.
@@ -45,13 +48,6 @@ The exercise is based on Haakon Krogstad’s 2020 project *"Modelling motor prot
 
 ---
 
-## Language
-
-The notebook and all comments are written in **Norwegian**, as this course was originally completed as part of a university course at NTNU.  
-However, this `README.md` provides an overview in English for external readers.
-
----
-
 ## Conclusion
 
 Through random walk simulations in a two-level periodic potential, we were able to model the directional transport of motor proteins under stochastic dynamics. The results illustrate how asymmetry in stepping probabilities leads to a net current, even in the absence of a macroscopic force.
@@ -70,7 +66,10 @@ This supports the idea that directional motion in motor proteins can emerge pure
 - Python 3.x
 - `numpy`
 - `matplotlib`
-- `seaborn`
+- `scipy`
+- `pandas`
+- `warnings` (to suppress warnings in the notebook)
+- `jupyter` (for running the notebook)
 - `tqdm` (optional)
 
 Install with:
