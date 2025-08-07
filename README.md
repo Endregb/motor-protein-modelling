@@ -4,7 +4,7 @@ This project models the stochastic motion of motor proteins, such as myosin, as 
 
 The notebook simulates this process using a **biased random walk** in a **two-level periodic potential landscape**, capturing essential features of directional movement, asymmetry, and stochasticity in biological systems.
 
-![Motor Protein Transport Model](figures\ratchet-potential.png)
+![Motor Protein Transport Model](figures/ratchet-potential.png)
 *Figure 1: Illustration of the two-level periodic potential landscape used to model motor protein movement. The asymmetry in potential wells creates directional bias, while thermal fluctuations allow proteins to overcome energy barriers and "walk" along the track.*
 
 ![Average Current in Motor Protein Transport](figures/average-current.png)
