@@ -16,7 +16,7 @@ The notebook simulates this process using a **biased random walk** in a **two-le
 
 - Understand how **microscopic transition probabilities** give rise to **macroscopic transport behavior**
 - Use numerical methods to simulate transport and compare with analytical predictions
-- Explore how parameters like **step bias**, **crowding**, and **transition rates** affect net motion
+- Explore how parameters like **thermal energy**, and **asymmetry** affect net motion
 
 ---
 
