@@ -38,7 +38,8 @@ The notebook simulates this process using a **biased random walk** in a **two-le
 
 ## Academic Context
 
-The notebook and all comments are written in **Norwegian**, as this course was originally completed as part of the university course **TMA4320 Introduksjon til vitenskapelige beregninger**at NTNU (Spring 2025).  
+This project was completed as a group assignment as part of the university course **TMA4320 Introduksjon til vitenskapelige beregninger**at NTNU (Spring 2025).
+Therefore the notebook and all comments are written in **Norwegian**.
 However, this `README.md` provides an overview in English for external readers.
 The exercise is based on Haakon Krogstad’s 2020 project *"Modelling motor proteins as particles diffusing in parallel potentials"*.
 
